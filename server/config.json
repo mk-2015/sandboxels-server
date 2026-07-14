@@ -1,0 +1,23 @@
+{
+    "hidden": "./hidden",
+    "root": "./root",
+    "ssl": 
+    {
+        "use ssl": false,
+        "cert": "cert.pem",
+		"key": "key.pem"
+    },
+	
+	"server":
+	{
+		"port": 80,
+		"sslport": 443,
+		"hosts": "0.0.0.0",
+		"db": 
+		{
+			"url": "https://127.0.0.1:60",
+			"password": "egpassw",
+			"user": "eguser"
+		}
+	}
+}
