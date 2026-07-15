@@ -27,8 +27,8 @@ else:
     ssl_key = None
 
 ## Apis
-@app.get("/api/test"):
-def test()
+@app.get("/api/test")
+def test():
     return "Hello this is a test!"
 
 if __name__ == "__main__":

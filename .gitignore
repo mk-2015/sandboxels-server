@@ -1,0 +1,7 @@
+# Python
+.pyc
+.venv
+
+# ssl
+key.pem
+cert.pem
