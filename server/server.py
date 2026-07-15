@@ -13,6 +13,11 @@ with open("config.json", "r") as file:
 os.makedirs(cfg["root"], exist_ok=True)
 os.makedirs(cfg["hidden"], exist_ok=True)
 
+## Apis
+@app.get("/api/test")
+def test():
+    return "Hello this is a test!"
+
 app.mount("/", StaticFiles(directory=cfg["root"], html=True), name="root")
 
 host = cfg["server"]["hosts"]
@@ -25,11 +30,6 @@ else:
     port = cfg["server"]["port"]
     ssl_cert = None
     ssl_key = None
-
-## Apis
-@app.get("/api/test")
-def test():
-    return "Hello this is a test!"
 
 if __name__ == "__main__":
     uvicorn.run(
