@@ -7,6 +7,12 @@ Host your own sandboxels server!
 git clone https://github.com/mk-2015/sandboxels-server box && cd box
 ```
 
+- Create .venv:
+```
+python -mvenv .venv # use uv if preffered
+source .venv/bin/activate
+```
+
 - Configure:
 ```bash
 cd server
@@ -16,14 +22,8 @@ chmod +x ./update.sh ./update-ssl.sh # MacOs or Linux (Any)
 ./update-ssl.sh
 ```
 
-- Install dependincies:
+- Install dependinces & run:
 ```bash
-cd .. && python -mvenv .venv && cd server
-pip install -r requirements.txt
-```
-
-- Run:
-```bash
-source ../.venv/bin/activate
-python server.py
+pip install -r requirements.txt # Use uv if preffered
+python server.py # use uv run if preffered
 ```
